@@ -5,7 +5,7 @@ var words = {
 var handlers = {
     getMostFrequentWords : async function () {
         const N = document.getElementById('N').valueAsNumber;
-        const url = `http://127.0.0.1:3000/most-frequent-words?N=${N}`;
+        const url = `https://terribly-tiny-tales-challenge.herokuapp.com:3000/most-frequent-words?N=${N}`;
         const mostFrequentWords = await fetch(url);
         words.mostFrequentWords = await mostFrequentWords.json();
         view.displayTable();
